@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mindset Formula | Unlock Your Potential</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- GLOBAL --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #080808;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- BRASS GRADIENT SYSTEM --- */
+        :root {
+            --brass-bg: linear-gradient(180deg,
+                #ebdcb2 0%,
+                #dcc079 25%,
+                #b69246 50%,
+                #997630 100%
+            );
+
+            --brass-text: linear-gradient(180deg,
+                #fffae6 0%,
+                #e6c875 45%,
+                #ae862c 55%,
+                #d4af37 100%
+            );
+
+            --brass-main: #b69246;
+            --brass-light: #dcc079;
+            --brass-dark: #997630;
+        }
+
+        .gold-bg {
+            background: var(--brass-bg);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+        }
+
+        .gold-text {
+            background: var(--brass-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5));
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            padding: 40px 0 60px;
+        }
+
+        @media (min-width: 992px) {
+            .hero {
+                display: flex;
+                align-items: center;
+                padding: 60px 0;
+            }
+        }
+
+        .page-header {
+            font-family: 'Cinzel', serif;
+            color: var(--brass-main);
+            text-align: center;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        @media (min-width: 576px) {
+            .page-header {
+                font-size: 1.5rem;
+                letter-spacing: 4px;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .page-header {
+                font-size: 2rem;
+                letter-spacing: 5px;
+                margin-bottom: 3rem;
+            }
+        }
+
+        .product-col {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .product-img {
+            max-width: 220px;
+            width: 100%;
+            filter: drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+        }
+
+        @media (min-width: 400px) {
+            .product-img { max-width: 260px; }
+        }
+
+        @media (min-width: 576px) {
+            .product-img { max-width: 300px; }
+        }
+
+        @media (min-width: 992px) {
+            .product-col { margin-bottom: 0; }
+            .product-img { max-width: 380px; }
+        }
+
+        @media (min-width: 1200px) {
+            .product-img { max-width: 420px; }
+        }
+
+        /* --- PRICING CARD --- */
+        .pricing-card {
+            background-color: #111111;
+            border: 2px solid var(--brass-main);
+            border-radius: 12px;
+            overflow: hidden;
+            max-width: 340px;
+            margin: 0 auto;
+            box-shadow: 0 0 50px rgba(182, 146, 70, 0.15);
+        }
+
+        @media (min-width: 400px) {
+            .pricing-card { max-width: 380px; }
+        }
+
+        @media (min-width: 576px) {
+            .pricing-card { max-width: 420px; }
+        }
+
+        @media (min-width: 992px) {
+            .pricing-card { max-width: 500px; }
+        }
+
+        .card-header-brass {
+            padding: 18px 15px;
+            text-align: center;
+            border-bottom: 1px solid #856322;
+        }
+
+        @media (min-width: 400px) {
+            .card-header-brass { padding: 20px 15px; }
+        }
+
+        @media (min-width: 576px) {
+            .card-header-brass { padding: 25px 15px; }
+        }
+
+        .card-header-brass h1,
+        .card-header-brass h2 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            color: #0a0a0a;
+            font-size: 1.25rem;
+            line-height: 1.15;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+        }
+
+        @media (min-width: 400px) {
+            .card-header-brass h1,
+            .card-header-brass h2 { font-size: 1.4rem; }
+        }
+
+        @media (min-width: 576px) {
+            .card-header-brass h1,
+            .card-header-brass h2 { font-size: 1.7rem; }
+        }
+
+        @media (min-width: 992px) {
+            .card-header-brass h1,
+            .card-header-brass h2 { font-size: 2rem; }
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 22px 0 8px;
+        }
+
+        @media (min-width: 576px) {
+            .price-row {
+                gap: 20px;
+                padding: 30px 0 10px;
+            }
+        }
+
+        .old-price {
+            font-size: 1.6rem;
+            color: #777;
+            font-weight: 400;
+            position: relative;
+            letter-spacing: -1px;
+        }
+
+        @media (min-width: 576px) {
+            .old-price { font-size: 2rem; }
+        }
+
+        @media (min-width: 992px) {
+            .old-price { font-size: 2.2rem; }
+        }
+
+        .strikethrough {
+            position: absolute;
+            width: 110%;
+            height: 2px;
+            background-color: #bd2222;
+            top: 52%;
+            left: -5%;
+            transform: rotate(-6deg);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        @media (min-width: 576px) {
+            .strikethrough { height: 3px; }
+        }
+
+        .new-price {
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 0.9;
+            letter-spacing: -2px;
+        }
+
+        @media (min-width: 400px) {
+            .new-price { font-size: 3.5rem; }
+        }
+
+        @media (min-width: 576px) {
+            .new-price { font-size: 4rem; }
+        }
+
+        @media (min-width: 992px) {
+            .new-price { font-size: 4.5rem; }
+        }
+
+        .brass-line {
+            height: 1px;
+            border: none;
+            background: radial-gradient(circle, var(--brass-main) 0%, rgba(182, 146, 70, 0) 90%);
+            margin: 15px 30px;
+            opacity: 0.6;
+        }
+
+        @media (min-width: 576px) {
+            .brass-line { margin: 20px 40px; }
+        }
+
+        .timer-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+        }
+
+        .timer-box {
+            text-align: center;
+            width: 55px;
+        }
+
+        @media (min-width: 400px) {
+            .timer-box { width: 65px; }
+        }
+
+        @media (min-width: 576px) {
+            .timer-box { width: 75px; }
+        }
+
+        @media (min-width: 992px) {
+            .timer-box { width: 80px; }
+        }
+
+        .timer-digit {
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        @media (min-width: 400px) {
+            .timer-digit { font-size: 2.2rem; }
+        }
+
+        @media (min-width: 576px) {
+            .timer-digit { font-size: 2.6rem; }
+        }
+
+        @media (min-width: 992px) {
+            .timer-digit { font-size: 3rem; }
+        }
+
+        .timer-label {
+            color: var(--brass-light);
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        @media (min-width: 400px) {
+            .timer-label { font-size: 0.6rem; }
+        }
+
+        @media (min-width: 576px) {
+            .timer-label {
+                font-size: 0.7rem;
+                margin-top: 8px;
+            }
+        }
+
+        .timer-colon {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--brass-main);
+            margin-top: -3px;
+            opacity: 0.9;
+        }
+
+        @media (min-width: 400px) {
+            .timer-colon { font-size: 1.8rem; }
+        }
+
+        @media (min-width: 576px) {
+            .timer-colon { font-size: 2.2rem; }
+        }
+
+        @media (min-width: 992px) {
+            .timer-colon { font-size: 2.5rem; margin-top: -5px; }
+        }
+
+        .cta-wrapper {
+            padding: 12px 20px 18px;
+        }
+
+        @media (min-width: 576px) {
+            .cta-wrapper { padding: 15px 35px 25px; }
+        }
+
+        .btn-brass {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            color: #050505;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.2px;
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.5),
+                0 4px 10px rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .btn-brass:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+            color: #050505;
+            text-decoration: none;
+        }
+
+        @media (min-width: 400px) {
+            .btn-brass {
+                padding: 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .btn-brass {
+                padding: 18px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .btn-brass { font-size: 1.1rem; }
+        }
+
+        .card-footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #aaaaaa;
+            padding-bottom: 18px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        @media (min-width: 576px) {
+            .card-footer-note {
+                font-size: 0.85rem;
+                padding-bottom: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .card-footer-note {
+                font-size: 0.9rem;
+                padding-bottom: 25px;
+            }
+        }
+
+        /* ==================== SECTIONS ==================== */
+        .section {
+            padding: 60px 0;
+        }
+
+        @media (min-width: 768px) {
+            .section { padding: 80px 0; }
+        }
+
+        @media (min-width: 992px) {
+            .section { padding: 100px 0; }
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--brass-light);
+        }
+
+        @media (min-width: 768px) {
+            .section-title { font-size: 1.8rem; }
+        }
+
+        /* ==================== THE PROGRAM ==================== */
+        .program-section {
+            background: #080808;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .program-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
+
+        .prog-item {
+            text-align: center;
+        }
+
+        .prog-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .prog-video-frame {
+            display: inline-block;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+        }
+
+        .prog-video-bar {
+            height: 6px;
+            background: var(--brass-bg);
+        }
+
+        .prog-video-frame img {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .prog-workbook img {
+            max-width: 160px;
+            width: 100%;
+            filter: drop-shadow(0 25px 50px rgba(0,0,0,0.6));
+        }
+
+        @media (min-width: 768px) {
+            .prog-workbook img {
+                max-width: 180px;
+            }
+        }
+
+        .prog-audio-box {
+            max-width: 200px;
+            width: 100%;
+            filter: drop-shadow(0 25px 50px rgba(0,0,0,0.6));
+        }
+
+        @media (min-width: 768px) {
+            .prog-audio-box {
+                max-width: 220px;
+            }
+        }
+
+        /* ==================== COPY SECTIONS ==================== */
+        .problem-section,
+        .solution-section,
+        .for-section {
+            background: #080808;
+        }
+
+        .solution-section {
+            background: linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+        }
+
+        .copy-block {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .copy-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 35px;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 768px) {
+            .copy-headline {
+                font-size: 2rem;
+            }
+        }
+
+        .copy-text {
+            font-size: 1.05rem;
+            color: #aaa;
+            line-height: 1.9;
+        }
+
+        .copy-text p {
+            margin-bottom: 20px;
+        }
+
+        .copy-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .copy-text strong {
+            color: var(--brass-light);
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--brass-main);
+            font-weight: bold;
+        }
+
+        .for-section {
+            background: linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+        }
+
+        /* ==================== GUARANTEE ==================== */
+        .guarantee-section {
+            background: #080808;
+        }
+
+        /* ==================== TESTIMONIALS ==================== */
+        .testimonials-section {
+            background: #080808;
+        }
+
+        .testimonials-row {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-row {
+                flex-direction: row;
+                gap: 40px;
+            }
+        }
+
+        .testimonial {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            font-style: italic;
+            color: #999;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--brass-dark);
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: var(--brass-main);
+            margin-top: 3px;
+        }
+
+        /* ==================== FAQ ==================== */
+        .faq-section {
+            background: #080808;
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(182, 146, 70, 0.15);
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid rgba(182, 146, 70, 0.15);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 22px 0;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-question span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            padding-right: 20px;
+        }
+
+        .faq-question i {
+            color: var(--brass-main);
+            font-size: 1.3rem;
+            font-style: normal;
+            transition: transform 0.3s;
+            font-weight: 300;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: #777;
+            line-height: 1.8;
+            padding-bottom: 22px;
+        }
+
+        /* ==================== FINAL CTA ==================== */
+        .final-cta {
+            background: #080808;
+            padding: 80px 0 100px;
+        }
+
+        .final-cta .section-title {
+            margin-bottom: 10px;
+        }
+
+        .social-proof {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: #050505;
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(182, 146, 70, 0.1);
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            letter-spacing: 5px;
+            color: var(--brass-dark);
+            margin-bottom: 25px;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: #555;
+            margin: 0 20px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--brass-main);
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: #444;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-header">THE MINDSET FORMULA</h1>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 product-col">
+                    <img src="/static/main-product.png" alt="The Mindset Formula" class="product-img">
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="pricing-card">
+                        <div class="card-header-brass gold-bg">
+                            <h1>Unlock Your<br>Potential Now!</h1>
+                        </div>
+
+                        <div class="price-row">
+                            <div class="old-price">
+                                $499
+                                <div class="strikethrough"></div>
+                            </div>
+                            <div class="new-price gold-text">$199</div>
+                        </div>
+
+                        <hr class="brass-line">
+
+                        <div class="timer-wrapper">
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="days">00</div>
+                                <div class="timer-label">Days</div>
+                            </div>
+                            <div class="timer-colon">:</div>
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="hours">00</div>
+                                <div class="timer-label">Hours</div>
+                            </div>
+                            <div class="timer-colon">:</div>
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="mins">00</div>
+                                <div class="timer-label">Mins</div>
+                            </div>
+                            <div class="timer-colon">:</div>
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="secs">00</div>
+                                <div class="timer-label">Secs</div>
+                            </div>
+                        </div>
+
+                        <hr class="brass-line">
+
+                        <div class="cta-wrapper">
+                            <a href="#checkout" class="gold-bg btn-brass">
+                                Start My Transformation
+                            </a>
+                        </div>
+
+                        <div class="card-footer-note">
+                            Save $300 today. 30-day money-back guarantee.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="section problem-section">
+        <div class="container">
+            <div class="copy-block">
+                <h2 class="copy-headline">You already know what to do.<br>So why aren't you doing it?</h2>
+                <div class="copy-text">
+                    <p>You've read the books. Watched the videos. Maybe even hired a coach.</p>
+                    <p>You know you're capable of more. You can see it. You can almost taste it.</p>
+                    <p>But something keeps holding you back.</p>
+                    <p>You start projects and don't finish them. You set goals and quietly abandon them. You tell yourself "tomorrow" and tomorrow never comes.</p>
+                    <p>It's not laziness. It's not lack of information. It's not even lack of motivation.</p>
+                    <p><strong>It's your mindset.</strong></p>
+                    <p>Somewhere along the way, you picked up beliefs that are running in the background—beliefs about what you deserve, what's possible for you, who you're allowed to become.</p>
+                    <p>And until you change those, nothing else will change either.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SOLUTION -->
+    <section class="section solution-section">
+        <div class="container">
+            <div class="copy-block">
+                <h2 class="copy-headline">What if you could reprogram those beliefs?</h2>
+                <div class="copy-text">
+                    <p>Not with affirmations you don't believe. Not with willpower that runs out by Tuesday.</p>
+                    <p>But by actually changing the way your mind works—at the subconscious level where real decisions are made.</p>
+                    <p>That's what The Mindset Formula does.</p>
+                    <p>It's a system designed to help you identify the hidden beliefs that are keeping you stuck, replace them with ones that serve you, and make the change permanent.</p>
+                    <p>People who've been through it report feeling different within days. Calmer. Clearer. More certain of themselves.</p>
+                    <p>They stop overthinking and start doing. They stop doubting and start trusting. They stop waiting for permission and start giving it to themselves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROGRAM -->
+    <section class="section program-section">
+        <div class="container">
+            <h2 class="section-title">What You Get</h2>
+
+            <div class="program-grid">
+                <!-- Video Course -->
+                <div class="prog-item">
+                    <div class="prog-label">The Film</div>
+                    <div class="prog-video-frame">
+                        <div class="prog-video-bar"></div>
+                        <img src="/static/video-screenshot.jpg" alt="Video Course">
+                    </div>
+                </div>
+
+                <!-- Workbooks -->
+                <div class="prog-item prog-workbook">
+                    <div class="prog-label">Workbooks</div>
+                    <img src="/static/workbook.png" alt="The Abundance Mindset Guide">
+                </div>
+
+                <!-- Reprogramming Audios -->
+                <div class="prog-item">
+                    <div class="prog-label">Audio Program</div>
+                    <img src="/static/pack.png" alt="Audio Library" class="prog-audio-box">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="section for-section">
+        <div class="container">
+            <div class="copy-block">
+                <h2 class="copy-headline">This is for you if...</h2>
+                <div class="copy-text">
+                    <ul class="check-list">
+                        <li>You're tired of knowing what to do but not doing it</li>
+                        <li>You've tried other programs and they didn't stick</li>
+                        <li>You feel like you're capable of so much more than your current results show</li>
+                        <li>You want to stop self-sabotaging and start following through</li>
+                        <li>You're ready to stop thinking about change and actually change</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title">From People Who've Been Through It</h2>
+
+            <div class="testimonials-row">
+                <div class="testimonial">
+                    <p class="testimonial-text">I used to have a million ideas but never follow through on any of them. Now I finish what I start. That alone has changed everything for me.</p>
+                    <div class="testimonial-author">Maria R.</div>
+                    <div class="testimonial-role">Entrepreneur</div>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">The audios are the secret weapon. I just play them at night and wake up feeling different. More sure of myself. It's hard to explain but it works.</p>
+                    <div class="testimonial-author">James D.</div>
+                    <div class="testimonial-role">Coach</div>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">I was skeptical. I've bought so many courses that just sit there. But this one got me to actually do the work—and see the results.</p>
+                    <div class="testimonial-author">Ana L.</div>
+                    <div class="testimonial-role">Writer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE BLOCK -->
+    <section class="section guarantee-section">
+        <div class="container">
+            <div class="copy-block">
+                <h2 class="copy-headline">Try it risk-free for 30 days</h2>
+                <div class="copy-text" style="text-align: center;">
+                    <p>Go through the entire program. Do the work. Listen to the audios.</p>
+                    <p>If you don't feel a real shift in how you think, how you feel, and how you show up—just send an email and get a full refund. No hoops, no hassle, no hard feelings.</p>
+                    <p>We've helped thousands of people transform their mindset. We're confident it'll work for you too.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title">Questions</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>I've tried other programs before. Why would this be different?</span>
+                        <i>+</i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most programs give you information and hope you'll apply it. This one is designed to change how your subconscious mind operates—so the change happens automatically, not through constant effort.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long until I see results?</span>
+                        <i>+</i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many people notice a shift within the first week. But real, lasting change builds over time. The audio program is designed to be used consistently for best results.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What if I don't have time?</span>
+                        <i>+</i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The audio program works while you sleep. You literally don't have to carve out extra time—just press play before bed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is there a guarantee?</span>
+                        <i>+</i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. 30 days, no questions asked. If it's not for you, you get your money back. Simple.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long do I have access?</span>
+                        <i>+</i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Forever. This is a one-time purchase with lifetime access. No subscriptions, no renewals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="checkout">
+        <div class="container">
+            <h2 class="section-title">Get Started Today</h2>
+            <p class="social-proof">Join 2,500+ people who've already made the shift.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="pricing-card">
+                        <div class="card-header-brass gold-bg">
+                            <h2>Full Access</h2>
+                        </div>
+
+                        <div class="price-row">
+                            <div class="old-price">
+                                $499
+                                <div class="strikethrough"></div>
+                            </div>
+                            <div class="new-price gold-text">$199</div>
+                        </div>
+
+                        <hr class="brass-line">
+
+                        <div class="timer-wrapper">
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="days2">00</div>
+                                <div class="timer-label">Days</div>
+                            </div>
+                            <div class="timer-colon">:</div>
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="hours2">00</div>
+                                <div class="timer-label">Hours</div>
+                            </div>
+                            <div class="timer-colon">:</div>
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="mins2">00</div>
+                                <div class="timer-label">Mins</div>
+                            </div>
+                            <div class="timer-colon">:</div>
+                            <div class="timer-box">
+                                <div class="timer-digit gold-text" id="secs2">00</div>
+                                <div class="timer-label">Secs</div>
+                            </div>
+                        </div>
+
+                        <hr class="brass-line">
+
+                        <div class="cta-wrapper">
+                            <a href="#" class="gold-bg btn-brass">
+                                Get Instant Access
+                            </a>
+                        </div>
+
+                        <div class="card-footer-note">
+                            One payment. Lifetime access. 30-day guarantee.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">THE MINDSET FORMULA</div>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="footer-copy">&copy; 2024 The Mindset Formula. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown
+        function countdown(d, h, m, s) {
+            const end = new Date();
+            end.setDate(end.getDate() + 3);
+            end.setHours(23, 59, 59);
+
+            function update() {
+                const now = new Date();
+                const diff = end - now;
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById(d).textContent = String(days).padStart(2, '0');
+                document.getElementById(h).textContent = String(hours).padStart(2, '0');
+                document.getElementById(m).textContent = String(mins).padStart(2, '0');
+                document.getElementById(s).textContent = String(secs).padStart(2, '0');
+            }
+            update();
+            setInterval(update, 1000);
+        }
+
+        countdown('days', 'hours', 'mins', 'secs');
+        countdown('days2', 'hours2', 'mins2', 'secs2');
+
+        // FAQ
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!wasActive) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
