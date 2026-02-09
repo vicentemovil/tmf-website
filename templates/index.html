@@ -16,7 +16,7 @@
         }
 
         body {
-            background-color: #080808;
+            background-color: #0f0f0f;
             font-family: 'Montserrat', sans-serif;
             color: white;
             -webkit-font-smoothing: antialiased;
@@ -62,11 +62,18 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(8, 8, 8, 0.95);
+            background: rgba(15, 15, 15, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(182, 146, 70, 0.15);
             padding: 12px 0;
             transition: all 0.3s ease;
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .site-header.visible {
+            transform: translateY(0);
+            opacity: 1;
         }
 
         .header-inner {
@@ -109,13 +116,6 @@
             text-decoration: none;
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
             transition: all 0.2s ease;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .header-cta.visible {
-            opacity: 1;
-            pointer-events: auto;
         }
 
         .header-cta:hover {
@@ -134,14 +134,14 @@
         /* --- HERO SECTION --- */
         .hero {
             min-height: 100vh;
-            padding: 80px 0 60px;
+            padding: 40px 0 60px;
         }
 
         @media (min-width: 992px) {
             .hero {
                 display: flex;
                 align-items: center;
-                padding: 100px 0 60px;
+                padding: 60px 0;
             }
         }
 
@@ -480,11 +480,21 @@
 
         .card-footer-note {
             text-align: center;
-            font-size: 0.75rem;
-            color: #aaaaaa;
-            padding-bottom: 18px;
+            padding: 0 20px 18px;
             line-height: 1.6;
-            font-weight: 400;
+        }
+
+        .card-footer-note .savings {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--brass-light);
+            margin-bottom: 2px;
+        }
+
+        .card-footer-note .lifetime {
+            font-size: 0.85rem;
+            color: #c5c5c5;
         }
 
         @media (min-width: 576px) {
@@ -529,7 +539,7 @@
 
         /* ==================== THE PROGRAM ==================== */
         .program-section {
-            background: #080808;
+            background: #0f0f0f;
         }
 
         .program-grid {
@@ -605,11 +615,11 @@
         .problem-section,
         .solution-section,
         .for-section {
-            background: #080808;
+            background: #0f0f0f;
         }
 
         .solution-section {
-            background: linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
         }
 
         .copy-block {
@@ -634,9 +644,10 @@
         }
 
         .copy-text {
-            font-size: 1.05rem;
-            color: #aaa;
-            line-height: 1.9;
+            font-size: 1.15rem;
+            color: #d8d8d8;
+            line-height: 2.1;
+            font-weight: 400;
         }
 
         .copy-text p {
@@ -660,10 +671,10 @@
         .check-list li {
             position: relative;
             padding-left: 35px;
-            margin-bottom: 18px;
-            font-size: 1.05rem;
-            color: #aaa;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.15rem;
+            color: #d8d8d8;
+            line-height: 1.9;
         }
 
         .check-list li::before {
@@ -675,17 +686,17 @@
         }
 
         .for-section {
-            background: linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
         }
 
         /* ==================== GUARANTEE ==================== */
         .guarantee-section {
-            background: #080808;
+            background: #0f0f0f;
         }
 
         /* ==================== TESTIMONIALS ==================== */
         .testimonials-section {
-            background: #080808;
+            background: #0f0f0f;
         }
 
         .testimonials-row {
@@ -710,10 +721,10 @@
         }
 
         .testimonial-text {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-style: italic;
-            color: #999;
-            line-height: 1.8;
+            color: #d0d0d0;
+            line-height: 1.9;
             margin-bottom: 25px;
         }
 
@@ -740,7 +751,7 @@
 
         /* ==================== FAQ ==================== */
         .faq-section {
-            background: #080808;
+            background: #0f0f0f;
         }
 
         .faq-list {
@@ -798,15 +809,15 @@
         }
 
         .faq-answer p {
-            font-size: 0.95rem;
-            color: #777;
-            line-height: 1.8;
+            font-size: 1rem;
+            color: #c0c0c0;
+            line-height: 1.9;
             padding-bottom: 22px;
         }
 
         /* ==================== FINAL CTA ==================== */
         .final-cta {
-            background: #080808;
+            background: #0f0f0f;
             padding: 80px 0 100px;
         }
 
@@ -816,8 +827,8 @@
 
         .social-proof {
             text-align: center;
-            font-size: 0.95rem;
-            color: #777;
+            font-size: 1rem;
+            color: #b5b5b5;
             margin-bottom: 40px;
         }
 
@@ -898,10 +909,10 @@
 
                         <div class="price-row">
                             <div class="old-price">
-                                $499
+                                $249
                                 <div class="strikethrough"></div>
                             </div>
-                            <div class="new-price gold-text">$199</div>
+                            <div class="new-price gold-text">$99</div>
                         </div>
 
                         <hr class="brass-line">
@@ -937,7 +948,8 @@
                         </div>
 
                         <div class="card-footer-note">
-                            Save $300 today.
+                            <span class="savings">Save $150 today</span>
+                            <span class="lifetime">One payment. Lifetime access.</span>
                         </div>
                     </div>
                 </div>
@@ -1123,10 +1135,10 @@
 
                         <div class="price-row">
                             <div class="old-price">
-                                $499
+                                $249
                                 <div class="strikethrough"></div>
                             </div>
-                            <div class="new-price gold-text">$199</div>
+                            <div class="new-price gold-text">$99</div>
                         </div>
 
                         <hr class="brass-line">
@@ -1162,7 +1174,8 @@
                         </div>
 
                         <div class="card-footer-note">
-                            One payment. Lifetime access.
+                            <span class="savings">Save $150 today</span>
+                            <span class="lifetime">One payment. Lifetime access.</span>
                         </div>
                     </div>
                 </div>
@@ -1179,7 +1192,7 @@
                 <a href="#">Privacy</a>
                 <a href="#">Contact</a>
             </div>
-            <p class="footer-copy">&copy; 2024 The Mindset Formula. All rights reserved.</p>
+            <p class="footer-copy">&copy; {{ current_year }} The Mindset Formula. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1211,13 +1224,13 @@
         countdown('days', 'hours', 'mins', 'secs');
         countdown('days2', 'hours2', 'mins2', 'secs2');
 
-        // Header CTA visibility on scroll
-        const headerCta = document.querySelector('.header-cta');
+        // Header visibility on scroll
+        const siteHeader = document.querySelector('.site-header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 400) {
-                headerCta.classList.add('visible');
+                siteHeader.classList.add('visible');
             } else {
-                headerCta.classList.remove('visible');
+                siteHeader.classList.remove('visible');
             }
         });
 
