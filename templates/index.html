@@ -131,6 +131,116 @@
             }
         }
 
+        /* --- HOOK BLOCK --- */
+        .hook-block {
+            text-align: center;
+            padding: 30px 20px;
+            margin: 0 auto 30px;
+            max-width: 500px;
+        }
+
+        @media (min-width: 992px) {
+            .hook-block {
+                max-width: 700px;
+                padding: 40px 20px 50px;
+            }
+        }
+
+        .hook-decoration {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .hook-decoration::before,
+        .hook-decoration::after {
+            content: '';
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--brass-main), transparent);
+        }
+
+        @media (min-width: 576px) {
+            .hook-decoration::before,
+            .hook-decoration::after {
+                width: 80px;
+            }
+        }
+
+        .hook-diamond {
+            color: var(--brass-main);
+            font-size: 0.6rem;
+            opacity: 0.8;
+        }
+
+        .hook-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (min-width: 576px) {
+            .hook-headline {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hook-headline {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+        }
+
+        .hook-subtext {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 576px) {
+            .hook-subtext {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hook-subtext {
+                font-size: 1.05rem;
+                margin-bottom: 25px;
+            }
+        }
+
+        .hook-decoration-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .hook-decoration-bottom::before,
+        .hook-decoration-bottom::after {
+            content: '';
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--brass-main), transparent);
+        }
+
+        @media (min-width: 576px) {
+            .hook-decoration-bottom::before,
+            .hook-decoration-bottom::after {
+                width: 80px;
+            }
+        }
+
         /* --- HERO SECTION --- */
         .hero {
             min-height: 100vh;
@@ -893,6 +1003,18 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="page-header">The Mindset Formula</h1>
+                </div>
+            </div>
+
+            <!-- Hook Block (Mobile) -->
+            <div class="hook-block">
+                <div class="hook-decoration">
+                    <span class="hook-diamond">&#9670;</span>
+                </div>
+                <p class="hook-headline">What if the only thing standing between you and the life you want... is your own mind?</p>
+                <p class="hook-subtext">The system to identify and permanently replace the hidden beliefs that keep you stuck, overwhelmed, and playing small.</p>
+                <div class="hook-decoration-bottom">
+                    <span class="hook-diamond">&#9670;</span>
                 </div>
             </div>
 
